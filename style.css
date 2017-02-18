@@ -1,4 +1,25 @@
-.row{
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline:0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+#page {
+    margin: 0;
+}
+
+.row {
     margin: 0px;
     overflow: auto;
     display: flex;
@@ -6,54 +27,56 @@
     justify-content: center;
 }
 
-.col{
+.col {
     width: 10vh;
     height: 10vh;
     margin: 1px;
     border: solid 1px #e1e1e1;
-    float: left;
     text-align: center;
     line-height: 10vh;
+    font-size: 1em;
 }
-.day{
+.day {
     background-color: beige;
 }
-#stage{
-    height: 90%;
-    margin: 0;
+
+.today {
+    border: 2px solid green;
+    background-color: aquamarine;
+    box-sizing: border-box;
 }
 
 .month {
     text-align: center;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
 
-body{
+.buttonLayout {
+    position: absolute;
     width: 100%;
-    height: 100%;
-}
-
-.buttonLayout{
     height: 70px;
-    min-height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 10px;
+    bottom: 0;
 }
 
-.buttonLayout>button{
+.buttonLayout>button {
     height: 50px;
+    width: 100px;
     font-size: 20px;
     border-radius: 10px;
 }
-.weekDay{
+
+.btnNext {
+    position: absolute;
+    right: 120px;
+}
+
+.btnPrevious {
+    position: absolute;
+    left: 120px;
+}
+
+.weekDay {
     display: inline-block;
     width: 10vh;
     background-color: lightgreen;
@@ -64,4 +87,79 @@ body{
     line-height: 5vh;
     font-size: 0.8em;
 }
+
+.addEventContainer {
+    position: absolute;
+    z-index: 20;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+    color: green;
+    width: 300px;
+    height: 300px;
+    display: block;
+    background-color: lightgreen;
+    text-align: center;
+    left: calc(50% - 160px);
+    top: calc(50% - 150px);
+}
+
+.addEventContainer>input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #c8f2c6;
+    border-radius: 10px;
+    border: 1px solid green;
+}
+
+.addEventContainer>button {
+    margin: 15px 20px;
+    font-size: 16px;
+    color: darkgreen;
+    border-radius: 10px;
+    border: 2px outset green;
+}
+
+.addEventContainer>button:active {
+    border: 2px inset green;
+}
+
+.eventDescription {
+    height: 100px;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: .3;
+    z-index: 15;
+}
+
+.showEventContainer {
+    width: 300px;
+    position: absolute;
+    z-index: 20;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+    color: green;
+    display: block;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.showEventContainer li,p {
+    text-align: left;
+    margin: 3px;
+}
+
+
 

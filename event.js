@@ -3,7 +3,11 @@
  */
 
 function Event (title, description) {
-    this.title = title;
+    if (title == undefined || title.length == 0){
+        this.title = "Unnamed event";
+    } else {
+        this.title = title;
+    }
     this.description = description;
 }
 

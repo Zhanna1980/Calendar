@@ -8,7 +8,7 @@ function Day (dayOfMonth, weekDay) {
     this.events = [];
 }
 
-Day.prototype.getWeekDay = function (){
+Day.prototype.getWeekDay = function () {
     return this.weekDay;
 };
 
@@ -22,5 +22,9 @@ Day.prototype.addEvent = function (event) {
 
 Day.prototype.getEvents = function () {
     return this.events;
+};
+
+Day.prototype.getDayOfMonth = function () {
+    return this.dayOfMonth;
 };
 

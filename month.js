@@ -50,7 +50,11 @@ Month.prototype.getDaysList = function () {
 };
 
 Month.prototype.getDate = function (date) {
-    return this.days[date - 1];
+    if (date >= 0 && date <= this.days.length) {
+        return this.days[date - 1];
+    } else {
+        return null;
+    }
 };
 
 Month.prototype.getFirstDay = function (){

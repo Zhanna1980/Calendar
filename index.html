@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Calendar</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-<div class="container">
-    <h1 class="month">Month</h1>
-    <div id = "stage"></div>
-    <div class="buttonLayout">
-        <button class="btnPrevious">Previous</button>
-        <button class="btnNext">Next</button>
+    <div class="screen"></div>
+    <div class="container">
+        <h1 class="month">Month</h1>
+        <div id = "page"></div>
+        <div class="buttonLayout">
+            <button class="btnPrevious">Previous</button>
+            <button class="btnNext">Next</button>
+        </div>
     </div>
-</div>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="event.js"></script>
     <script src="day.js"></script>
     <script src="month.js"></script>
+    <script src="year.js"></script>
     <script src="calendar.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
